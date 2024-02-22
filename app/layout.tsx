@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
-import { Righteous, Roboto } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
-
-const righteous = Righteous({
-  weight: '400',
-  style: "normal",
-  subsets: ['latin']
-})
+import Header from '@/components/header'
 
 const roboto = Roboto({
   weight: ['400', '500', '700', '900'],
@@ -26,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <Header />
+        {children}
+        </body>
     </html>
   )
 }

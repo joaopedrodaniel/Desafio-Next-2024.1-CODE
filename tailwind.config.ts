@@ -19,7 +19,12 @@ const config: Config = {
         'xl': '1920px',
         '2xl': '2560px',
         '3xl': '3440px',
-      }
+      },
+      colors: {
+        'primarycolor': '#D0552E',
+        'secondarycolor': '#D0AC76',
+        'extracolor': '#D0AC76',
+      },
     },
   },
   plugins: [],
