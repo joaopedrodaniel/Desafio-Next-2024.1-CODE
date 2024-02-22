@@ -37,10 +37,10 @@ export default function Header () {
                             />
                         }                    
                     </div>
-                    <div className="hidden md:flex">
+                    <div className="hidden md:flex gap-8">
                         {links.map((link, index) => 
                             <Link href={link.href} key={index}>
-                                <span className="text-xl text-black p-4 uppercase 2xl:text-2xl">
+                                <span className="text-xl text-black uppercase 2xl:text-2xl">
                                     {link.label}
                                 </span>
                             </Link>
