@@ -45,13 +45,13 @@ export default function Header () {
                                 </span>
                             </Link>
                         )}
-                    </div>    
+                    </div>   
                 </div>
             
                     { isNavigationOpen && (
                         <div className="md:hidden flex basis-full flex-col items-center gap-7 mt-5">
                             {links.map((link, index) =>
-                                <Link href={link.href} key={index}>
+                                <Link href={link.href} key={index} onClick={toggleNavigation}>
                                     <span className="text-xl text-black uppercase">
                                         {link.label}
                                     </span>
