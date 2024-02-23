@@ -1,7 +1,5 @@
-import Header from '@/components/header'
 import HeroSection from '@/components/hero-section'
 import Products from '@/components/products'
-import Image from 'next/image'
 
 export default function Home() {
   return (
