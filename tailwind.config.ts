@@ -24,7 +24,7 @@ const config: Config = {
       colors: {
         'primarycolor': '#D0552E',
         'secondarycolor': '#D0AC76',
-        'extracolor': '#D0AC76',
+        'extracolor': '#EFCE9C',
       },
     },
   },
