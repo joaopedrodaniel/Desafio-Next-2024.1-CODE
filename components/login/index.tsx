@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../admin/button";
 
 export default function TelaLogin() {
     return (
@@ -19,13 +20,7 @@ export default function TelaLogin() {
                         />
                     </div>
                 </div>
-                <div className="flex justify-center">
-                    <Link href={'/admin'}>
-                        <button className="bg-secondarycolor rounded-full w-[165px] h-[58px] text-xl uppercase font-bold hover:bg-primarycolor duration-100">
-                            Login
-                        </button>
-                    </Link>
-                </div>
+                <Button href="/admin" name="Login" />
             </div>
         </form>
     )
