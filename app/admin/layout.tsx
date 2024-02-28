@@ -1,4 +1,4 @@
-import AdminHeader from "@/components/admin/admin-header";
+import Header from "@/components/header";
 
 export default function HomeLayout({
     children,
@@ -7,7 +7,7 @@ export default function HomeLayout({
   }>) {
     return (
         <div>
-            <AdminHeader />
+            <Header />
             {children}
         </div>
     )

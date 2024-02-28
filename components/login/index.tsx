@@ -20,7 +20,7 @@ export default function TelaLogin() {
                         />
                     </div>
                 </div>
-                <Button href="/admin" name="Login" />
+                <Button href="/admin/management" name="Login" />
             </div>
         </form>
     )
