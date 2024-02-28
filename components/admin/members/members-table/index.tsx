@@ -1,6 +1,12 @@
-export default function Table() {
+import { iMembers } from "@/types/data"
+
+type MembersProps = {
+    members: iMembers[]
+}
+
+export default function Table({members}: MembersProps) {
     return (
-        <div className="w-full">
+        <div className="w-full overflow-x-auto">
             <table className="w-full bg-secondarycolor">
                 <thead>
                     <tr className="">
@@ -10,21 +16,13 @@ export default function Table() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th className="font-normal">João</th>
-                        <th className="font-normal">Dono</th>
-                        <th className="font-normal">blabla</th>
-                    </tr>
-                    <tr>
-                        <th className="font-normal">João</th>
-                        <th className="font-normal">Dono</th>
-                        <th className="font-normal">blabla</th>
-                    </tr>
-                    <tr>
-                        <th className="font-normal">João</th>
-                        <th className="font-normal">Dono</th>
-                        <th className="font-normal">blabla</th>
-                    </tr>
+                    {members.map((member, index) => (
+                        <tr key={index}>
+                            <th className="font-normal">{member.name}</th>
+                            <th className="font-normal">{member.cargo}</th>
+                            <th className="font-normal">{member.email}</th>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>

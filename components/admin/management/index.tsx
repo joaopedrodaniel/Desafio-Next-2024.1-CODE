@@ -1,14 +1,17 @@
-'use client'
+"use server"
 
-import { useState } from "react";
 import { CadastrarButton } from "./buttons";
 import ManagementTable from "./management-table";
+import getMembers from "@/actions/members";
 
-export default function ManagementPage() {
+export default async function ManagementPage() {
+
+    const members = await getMembers()
+
     return (
         <div className="flex flex-col gap-8 items-center w-full">
             <CadastrarButton />
-            <ManagementTable /> 
+            <ManagementTable members={members} /> 
         </div>
     )
 }
