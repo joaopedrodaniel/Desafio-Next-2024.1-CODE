@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import Button from "../../button";
 import AdminTitle from "../../title";
 
@@ -12,7 +13,10 @@ export default function CadastrarModal({isCButtonOpen, setIsCButtonOpen}: Cadast
 
     return (
         <div className="bg-black bg-opacity-80 fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center">
-            <div className="bg-primarycolor w-10/12 md:w-1/2 lg:w-1/3 flex justify-center">
+            <div className="bg-primarycolor w-10/12 md:w-1/2 lg:w-1/3 flex flex-col items-center justify-center">
+                <div onClick={toggleCButton} className="w-full flex justify-end">
+                    <X className="cursor-pointer" />
+                </div>
                 <div className="flex flex-col items-center gap-5 w-10/12">
                     <AdminTitle name="Cadastrar" />
                     <div className="flex flex-col gap-5 w-10/12">
