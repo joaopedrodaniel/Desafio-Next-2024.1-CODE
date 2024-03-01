@@ -1,4 +1,4 @@
-import getMembers from "@/actions/members";
+import { getMembers } from "@/actions/members";
 import Table from "@/components/admin/members/members-table";
 import Search from "@/components/admin/members/search";
 import AdminTitle from "@/components/admin/title";

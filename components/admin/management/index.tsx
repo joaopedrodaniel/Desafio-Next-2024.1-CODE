@@ -2,7 +2,7 @@
 
 import { CadastrarButton } from "./buttons";
 import ManagementTable from "./management-table";
-import getMembers from "@/actions/members";
+import { getMembers } from "@/actions/members";
 
 export default async function ManagementPage() {
 

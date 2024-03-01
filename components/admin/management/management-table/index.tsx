@@ -20,13 +20,13 @@ export default function ManagementTable({members}: MembersProps) {
                 <tbody>
                     {members.map((member, index) => (
                         <tr className="w-full" key={index}>
-                            <th className="font-normal pt-4">{member.name}</th>
-                            <th className="font-normal pt-4">{member.cargo}</th>
-                            <th className="font-normal pt-4">{member.email}</th>
+                            <th className="font-normal pt-4">{member?.name}</th>
+                            <th className="font-normal pt-4">{member?.cargo}</th>
+                            <th className="font-normal pt-4">{member?.email}</th>
                             <th className="flex flex-col items-center sm:flex-row sm:flex-wrap justify-center gap-2 pt-4 pb-1">
-                                <VizualizarButton id={1} />
-                                <EditarButton id={1} />
-                                <DeletarButton id={1} />
+                                <VizualizarButton id={member?.id} />
+                                <EditarButton id={member?.id} />
+                                <DeletarButton id={member?.id} />
                             </th>
                         </tr>
                     ))}

@@ -1,6 +1,6 @@
 export type iMembers = {
-    id: number;
-    name: string;
-    cargo: string;
-    email: string;
-};
+    id?: number;
+    name?: string;
+    cargo?: string;
+    email?: string;
+} | null;
