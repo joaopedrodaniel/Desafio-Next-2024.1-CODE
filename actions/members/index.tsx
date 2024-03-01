@@ -73,8 +73,6 @@ export async function createMember(formData: FormData) {
         },
     });
 
-    
-
     await prisma.membro.create({
         data: {
             name,

@@ -1,12 +1,9 @@
 import { iMembers } from "@/types/data"
 
-type MembersProps = {
-    members: iMembers[]
-}
-
-export default function Table({members}: MembersProps) {
+export default function Table({members, count}: {members: iMembers[], count: number}) {
     return (
         <div className="w-full overflow-x-auto">
+            <span>Foi encontrado {count} membros.</span>
             <table className="w-full bg-secondarycolor">
                 <thead>
                     <tr className="">
@@ -16,11 +13,11 @@ export default function Table({members}: MembersProps) {
                     </tr>
                 </thead>
                 <tbody>
-                    {members.map((member, index) => (
+                    {members?.map((member, index) => (
                         <tr key={index}>
-                            <th className="font-normal">{member.name}</th>
-                            <th className="font-normal">{member.cargo}</th>
-                            <th className="font-normal">{member.email}</th>
+                            <th className="font-normal">{member?.name}</th>
+                            <th className="font-normal">{member?.cargo}</th>
+                            <th className="font-normal">{member?.email}</th>
                         </tr>
                     ))}
                 </tbody>
