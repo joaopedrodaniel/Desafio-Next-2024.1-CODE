@@ -64,23 +64,20 @@ export async function createMember(formData: FormData) {
     const cargo = formData.get("cargo") as string;
     const email = formData.get("email") as string;
 
-    const memberVerification = await prisma.membro.findFirst({
-        where: {
-            OR: [
-                { name },
-                { email },
-            ],
-        },
-    });
+    try {
 
-    await prisma.membro.create({
-        data: {
-            name,
-            cargo,
-            email,
-            published: true,
-        },
-    });
+        await prisma.membro.create({
+            data: {
+                name,
+                cargo,
+                email,
+                published: true,
+            },
+        });
 
+      } catch (erro) {
+        redirect("/admin/management/error")
+      }
+     
     redirect("/admin/management")
 }

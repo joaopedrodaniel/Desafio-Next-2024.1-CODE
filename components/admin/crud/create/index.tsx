@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export default function CreateForm() {
     return (
-        <div className="flex w-full px-6 justify-center">
+        <div className="flex flex-col items-center w-full px-6 justify-center">
+            <div id="error-text"></div>
             <form className="bg-secondarycolor border-2 border-black rounded-lg w-10/12 md:w-1/2 lg:w-1/3 xl:min-h-[500px] flex flex-col items-center justify-center py-6" autoComplete="off" action={createMember}>
                 <div className="flex flex-col items-center gap-5 w-10/12 lg:gap-10">
                     <div className="flex flex-col gap-5 w-10/12">
