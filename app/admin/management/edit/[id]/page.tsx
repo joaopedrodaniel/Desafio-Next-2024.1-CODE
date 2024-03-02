@@ -9,7 +9,7 @@ export default async function EditPage({params}: {params: {id: string}}) {
     const member = await getMemberById(id)
 
     return (
-        <div className="w-full space-y-12 flex flex-col items-center">
+        <div className="w-full space-y-12 flex flex-col items-center min-h-screen">
             <AdminTitle name="Editar Membro" />
             <EditForm member={member} />
         </div>
